@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://crypto-b.github.io/test-site/"
 defaultContentLanguage = "en"
 theme = "r3fi"
 publishDir = "docs"

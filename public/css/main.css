@@ -1,0 +1,39 @@
+body {
+  color: #313131; }
+
+h1, h2, h3, h4 {
+  color: #000; }
+
+.r-bg--dark {
+  background-color: #260f38;
+  color: #FFF; }
+
+.r3fi-ticker {
+  font-weight: bold;
+  color: #a84988;
+  font-style: italic; }
+
+.homeHero {
+  color: #FFF; }
+  .homeHero h1 {
+    color: #FFF; }
+
+.r3fi-glow {
+  display: inline-block;
+  animation: r3fi-glow 1s ease-in-out infinite alternate; }
+  .r3fi-glow--cocked {
+    transform: rotate(15deg); }
+
+@keyframes r3fi-glow {
+  from {
+    text-shadow: 0 0 14px #a84988, 0 0 14px #f5a2eb;
+    color: #FFF; }
+  to {
+    text-shadow: 0 0 1px #a84988, 0 0 5px #f5a2eb;
+    color: #f5a2eb; } }
+
+.txCounter {
+  text-align: right; }
+  .txCounter .txCounter__count {
+    margin: 1em 0 .5em;
+    font-size: 2em; }

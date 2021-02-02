@@ -1,0 +1,17 @@
+baseURL = "http://example.org/"
+defaultContentLanguage = "en"
+theme = "r3fi"
+
+[languages]
+    [languages.en]
+        title = "R3FI.finance"
+        weight = 1
+        contentDir = "content/en"
+#
+#    [languages.fr]
+#        title = "R3FI.finance"
+#        weight = 2
+#        contentDir = "content/fr"
+
+[markup.goldmark.renderer]
+unsafe = true

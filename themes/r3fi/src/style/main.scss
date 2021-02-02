@@ -1,0 +1,67 @@
+$r3fi-colour-primary: #260f38;
+$r3fi-colour-secondary: #a84988;
+
+$r3fi-bg-dark: $r3fi-colour-primary;
+$r3fi-bg-light: #FFF;
+
+$r3fi-body-text-colour: #313131;
+
+$r3fi-text-light: #FFF;
+
+body {
+  color: $r3fi-body-text-colour;
+}
+
+h1, h2, h3, h4 {
+  color: #000;
+}
+
+.r-bg--dark {
+  background-color: $r3fi-bg-dark;
+  color: $r3fi-text-light;
+}
+
+.r3fi-ticker {
+  font-weight: bold;
+  color: $r3fi-colour-secondary;
+  font-style: italic;
+}
+
+.homeHero {
+
+  h1 {
+    color: $r3fi-text-light;
+  }
+
+  color: $r3fi-text-light;
+}
+
+.r3fi-glow {
+  display: inline-block;
+  animation: r3fi-glow 1s ease-in-out infinite alternate;
+
+  &--cocked {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes r3fi-glow {
+  from {
+    text-shadow: 0 0 14px $r3fi-colour-secondary, 0 0 14px #f5a2eb;
+    color: #FFF;
+  }
+
+  to {
+    text-shadow: 0 0 1px $r3fi-colour-secondary, 0 0 5px #f5a2eb;
+    color: #f5a2eb;
+  }
+}
+
+.txCounter {
+  text-align: right;
+
+  .txCounter__count {
+    margin: 1em 0 .5em;
+    font-size: 2em;
+  }
+}

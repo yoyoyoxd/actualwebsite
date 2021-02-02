@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="r-bg--dark">
+    <div class="container r-bg--dark">
+        <div class="row py-5">
+            <div class="col-sm homeHero">
+                {{ .Content }}
+            </div>
+            <div class="col-sm">
+                {{ $bundle := .Site.GetPage "/homepage" }}
+                {{ range $bundle.Resources.Match "features.md" }}
+                    {{ .Content }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        {{ $blocks := .Site.GetPage "/homepage_blocks" }}
+        {{ with $blocks.Resources.ByType "page" }}
+            {{ range sort . ".Params.position" }}
+            <div class="col-sm-{{ .Params.gridWidth }} py-4">
+                {{ if .Title }}
+                <h2>{{ .Title }}</h2>
+                {{ end }}
+                {{ .Content }}
+            </div>
+            {{ end }}
+        {{ end }}
+    </div>
+
+</div>
+{{ end }}

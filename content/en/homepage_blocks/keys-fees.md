@@ -8,6 +8,7 @@ gridWidth: 6
 position: 1
 
 ---
+# <i class="fas fa-key"></i> Your Keys, Your Fees.
 
 <span class="r3fi-ticker">R3FI</span> is a yield generating, non-custodial (your tokens always stay in your wallet) ERC-20 token
 that requires no lockup and no gas to claim your rewards. Whether your tokens are stored in MetaMask, in your Hardware wallet 

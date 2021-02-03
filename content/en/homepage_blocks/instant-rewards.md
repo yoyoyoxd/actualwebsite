@@ -5,5 +5,6 @@ draft: false
 gridWidth: 6
 position: 2
 ---
+# Instant rewards from the second your wallet holds R3FI.
 
 A 5% transaction fee is distributed amongst token holders from **Every. Single. Transaction** as it happens. 

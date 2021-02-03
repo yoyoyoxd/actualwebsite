@@ -23,4 +23,9 @@ gulp.task("js:watch", function () {
    gulp.watch("./src/scripts/**/*.js", gulp.series("js"));
 });
 
+gulp.task("webfonts", function () {
+   return gulp.src("./node_modules/@fortawesome/fontawesome-free/webfonts/**")
+       .pipe(gulp.dest("./static/webfonts/"));
+});
+
 gulp.task("watch", gulp.parallel("js:watch", "sass:watch"));

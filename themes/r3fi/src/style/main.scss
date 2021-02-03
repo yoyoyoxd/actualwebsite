@@ -1,19 +1,23 @@
-$r3fi-colour-primary: #260f38;
-$r3fi-colour-secondary: #a84988;
+$fa-font-path: "../webfonts";
 
-$r3fi-bg-dark: $r3fi-colour-primary;
-$r3fi-bg-light: #FFF;
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
 
-$r3fi-body-text-colour: #313131;
-
-$r3fi-text-light: #FFF;
+@import "variables";
 
 body {
   color: $r3fi-body-text-colour;
+  font-family: 'Monserrat', sans-serif;
 }
 
 h1, h2, h3, h4 {
   color: #000;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.5em;
+  text-transform: uppercase;
 }
 
 .r-bg--dark {
@@ -21,19 +25,102 @@ h1, h2, h3, h4 {
   color: $r3fi-text-light;
 }
 
+.r-bg--patterned {
+  background-image: url("../images/gplay.png");
+}
+
+.r-bg--secondary {
+  background-color: $r3fi-bg-secondary;
+  color: $r3fi-text-light;
+}
+
 .r3fi-ticker {
   font-weight: bold;
   color: $r3fi-colour-secondary;
-  font-style: italic;
 }
 
-.homeHero {
+.block-hero {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+
+  > div {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+.block-summary {
+  text-align: center;
 
   h1 {
     color: $r3fi-text-light;
+    font-size: 2em;
   }
 
   color: $r3fi-text-light;
+}
+
+
+.block-features {
+  ul {
+    list-style: none;
+    font-size: 1.3em;
+    display: inline-block;
+
+    li {
+      margin: .2em 0;
+
+      & + .fas {
+        margin-right: .5em;
+      }
+    }
+  }
+}
+
+.hero-links {
+  background: $r3fi-bg-secondary;
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 1em 0;
+    flex: 1 1 0;
+    justify-content: space-around;
+  }
+
+  &__link {
+    color: $r3fi-text-light;
+    text-decoration: none;
+    padding: .5em;
+
+    &:hover {
+      text-decoration: none;
+      color: $r3fi-text-light;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: .5em;
+
+    &--badge-white {
+      background-color: #FFF;
+      border-radius: 50%;
+      padding: 3px;
+    }
+  }
+}
+
+.r3fi-glow-wrapper {
+  white-space: nowrap;
 }
 
 .r3fi-glow {
@@ -41,7 +128,7 @@ h1, h2, h3, h4 {
   animation: r3fi-glow 1s ease-in-out infinite alternate;
 
   &--cocked {
-    transform: rotate(15deg);
+    transform: rotate(10deg);
   }
 }
 

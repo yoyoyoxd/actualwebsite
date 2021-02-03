@@ -1,33 +1,45 @@
 {{ define "main" }}
-<div class="r-bg--dark">
-    <div class="container r-bg--dark">
-        <div class="row py-5">
-            <div class="col-sm homeHero">
+    <div class="block-hero">
+        {{ $hero := .Site.GetPage "/homepage_hero" }}
+        <div class="block-summary">
+            {{ range $hero.Resources.Match "title.md" }}
+            {{ .Content }}
+            {{ end }}
+        </div>
+        <div class="block-features">
+            {{ range $hero.Resources.Match "features.md" }}
+            {{ .Content }}
+            {{ end }}
+        </div>
+        <div class="block-actions">
+            {{ range $hero.Resources.Match "actions.md" }}
+            {{ .Content }}
+            {{ end }}
+        </div>
+    </div>
+</div><!-- opened in header.html for the patterned background to match -->
+
+<div class="r-bg--secondary">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm hero-links">
+                {{ range $hero.Resources.Match "hero-links.*"}}
                 {{ .Content }}
-            </div>
-            <div class="col-sm">
-                {{ $bundle := .Site.GetPage "/homepage" }}
-                {{ range $bundle.Resources.Match "features.md" }}
-                    {{ .Content }}
-                {{ end }}
+                {{ end}}
             </div>
         </div>
     </div>
 </div>
 
 <div class="container">
-
     <div class="row">
         {{ $blocks := .Site.GetPage "/homepage_blocks" }}
         {{ with $blocks.Resources.ByType "page" }}
-            {{ range sort . ".Params.position" }}
-            <div class="col-sm-{{ .Params.gridWidth }} py-4">
-                {{ if .Title }}
-                <h2>{{ .Title }}</h2>
-                {{ end }}
-                {{ .Content }}
-            </div>
-            {{ end }}
+        {{ range sort . ".Params.position" }}
+        <div class="col-sm-{{ .Params.gridWidth }} py-4">
+            {{ .Content }}
+        </div>
+        {{ end }}
         {{ end }}
     </div>
 

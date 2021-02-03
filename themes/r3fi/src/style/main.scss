@@ -1,5 +1,14 @@
 $fa-font-path: "../webfonts";
 
+$grid-gutter-width: 60px;
+
+@import "variables";
+
+$primary: #2cacb5; // $r3fi-bg-dark;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
 
@@ -89,6 +98,7 @@ h1 {
     padding: 1em 0;
     flex: 1 1 0;
     justify-content: space-around;
+    align-items: center;
   }
 
   &__link {
@@ -102,6 +112,14 @@ h1 {
 
       span {
         text-decoration: underline;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__link {
+      span {
+        display: none;
       }
     }
   }
@@ -128,7 +146,8 @@ h1 {
   animation: r3fi-glow 1s ease-in-out infinite alternate;
 
   &--cocked {
-    transform: rotate(10deg);
+    transform: rotate(10deg) translateY(5px);
+    font-size: 1.5em;
   }
 }
 

@@ -15,7 +15,7 @@ gulp.task("sass:watch", function () {
 });
 
 gulp.task("js", function () {
-   return gulp.src("./src/scripts/**/*.js")
+   return gulp.src(["./node_modules/bootstrap/dist/js/bootstrap.bundle.js", "./src/scripts/**/*.js"])
        .pipe(gulp.dest("./static/js/"));
 });
 

@@ -36,11 +36,39 @@
         {{ $blocks := .Site.GetPage "/homepage_blocks" }}
         {{ with $blocks.Resources.ByType "page" }}
         {{ range sort . ".Params.position" }}
-        <div class="col-sm-{{ .Params.gridWidth }} py-4">
+        <div class="col-lg-{{ .Params.gridWidth }} py-4">
             {{ .Content }}
         </div>
         {{ end }}
         {{ end }}
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="accordion" id="accordionFaq">
+                {{ $blocks := .Site.GetPage "/homepage_faqs" }}
+                {{ with $blocks.Resources.ByType "page" }}
+                {{ range $index, $page := sort . ".Params.position" }}
+                <div class="card">
+                    <div class="card-header" id="faqH{{ $index }}">
+                        <h2 class="mb-0"> <button class="btn btn-link btn-block text-left" type="button" data-bs-toggle="collapse" data-bs-target="#faqC{{ $index }}" aria-expanded="true" aria-controls="faqC{{ $index }}">
+                            {{ .Title }}
+                        </button></h2>
+                    </div>
+
+                    <div id="faqC{{ $index }}" class="collapse show" aria-labelledby="faqH{{ $index }}" data-bs-parent="#accordionFaq">
+                        <div class="card-body">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
     </div>
 
 </div>

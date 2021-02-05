@@ -20,6 +20,10 @@ $secondary: $r3fi-bg-tertiary;
 
 @import "variables";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: $r3fi-text-light;
   font-family: 'Monserrat', sans-serif;
@@ -83,6 +87,10 @@ h1 {
   color: #FFF;
   transition: background-color .2s linear;
 
+  .navbar-brand {
+    font-family: "Sukar Black", Georgia, serif;
+  }
+
   &--dark {
     background-color: $r3fi-bg-dark;
   }
@@ -138,6 +146,10 @@ h1 {
     width: 32px;
     height: 32px;
     margin-right: .5em;
+
+    &--m0 {
+      margin-right: 0;
+    }
 
     &--badge-white {
       background-color: #FFF;
@@ -224,14 +236,28 @@ h1 {
   }
 }
 
+.card {
+  color: $r3fi-body-text-colour;
+
+  .card-header {
+    h2 .btn {
+      font-weight: bold;
+    }
+  }
+}
+
 .card--pop {
   background-color: lighten($r3fi-bg-tertiary, 25%);
   border: none;
   align-self: center;
+  position: relative;
+
+  * {
+    z-index: 1;
+  }
 
   h1 {
     color: $r3fi-bg-dark;
-    font-family: "Sukar Black", Georgia, serif;
     font-size: 1.2em;
   }
 
@@ -244,4 +270,18 @@ h1 {
       border-radius: 0;
     }
   }
+}
+
+.card--lightning:before {
+  content: "";
+  background-image: url("../images/lightning.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  bottom: -30px;
+  left: 0;
+  z-index: 0;
 }

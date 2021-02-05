@@ -5,6 +5,7 @@ draft: false
 gridWidth: 6
 position: 2
 card: true
+classes: card--lightning
 ---
 # Instant rewards from the second your wallet holds R3FI.
 

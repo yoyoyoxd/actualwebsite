@@ -11774,6 +11774,9 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   color: #FFF;
   font-family: 'Monserrat', sans-serif; }
@@ -11821,6 +11824,8 @@ h1 {
 .main-nav {
   color: #FFF;
   transition: background-color .2s linear; }
+  .main-nav .navbar-brand {
+    font-family: "Sukar Black", Georgia, serif; }
   .main-nav--dark {
     background-color: #260f38; }
   .main-nav a, .main-nav .navbar-toggler {
@@ -11854,6 +11859,8 @@ h1 {
   width: 32px;
   height: 32px;
   margin-right: .5em; }
+  .btn-icon__icon--m0 {
+    margin-right: 0; }
   .btn-icon__icon--badge-white {
     background-color: #FFF;
     border-radius: 50%;
@@ -11909,16 +11916,36 @@ h1 {
     margin: 1em 0 .5em;
     font-size: 2em; }
 
+.card {
+  color: #313131; }
+  .card .card-header h2 .btn {
+    font-weight: bold; }
+
 .card--pop {
   background-color: #f1eef2;
   border: none;
-  align-self: center; }
+  align-self: center;
+  position: relative; }
+  .card--pop * {
+    z-index: 1; }
   .card--pop h1 {
     color: #260f38;
-    font-family: "Sukar Black", Georgia, serif;
     font-size: 1.2em; }
   .card--pop p:last-child {
     margin-bottom: 0; }
   @media (max-width: 991.98px) {
     .card--pop {
       border-radius: 0; } }
+
+.card--lightning:before {
+  content: "";
+  background-image: url("../images/lightning.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  bottom: -30px;
+  left: 0;
+  z-index: 0; }

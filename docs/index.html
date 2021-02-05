@@ -45,16 +45,38 @@
         <div class="block-features">
             
             <ul>
-<li><i class="fas fa-coins"></i> 5M tokens, fixed deflationary design.</li>
-<li><i class="fas fa-times-circle"></i> No team wallet.</li>
-<li><i class="fas fa-tachometer-alt"></i> Instant rewards straight to your wallet.</li>
+<li><i class="fas fa-coins"></i> 5M tokens, fixed, deflationary by design.</li>
+<li><i class="fas fa-times-circle"></i> No team or developer wallets.</li>
+<li><i class="fas fa-tachometer-alt"></i> Instant gas-less rewards as soon as you hold <span class="r3fi-ticker">R3FI</span>.</li>
 </ul>
 
             
         </div>
         <div class="block-actions">
             
-            <p><a href="https://app.uniswap.org/#/swap?inputCurrency=0x13572851103bed49ff743af4c4bb5ace88b22e2f" class="btn btn-primary btn-icon text-nowrap"><img src="assets/icons/uniswap.svg" class="btn-icon__icon btn-icon__icon--badge-white"> <span>Buy on UniSwap</span></a></p>
+            
+<a href="https://app.uniswap.org/#/swap?inputCurrency=0x13572851103bed49ff743af4c4bb5ace88b22e2f" class="btn btn-primary btn-icon text-nowrap" data-toggle="modal" target="_blank" data-target="#uniswapGuide"><img src="assets/icons/uniswap.svg" class="btn-icon__icon btn-icon__icon--badge-white"> <span>Buy on UniSwap</span></a>
+
+<div class="modal fade" id="uniswapGuide" tabindex="-1" role="dialog" aria-labelledby="uniswapGuideLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content r-bg--light">
+            <div class="modal-header">
+                <h5 class="modal-title" id="uniswapGuideLabel"><span class="r3fi-ticker">R3FI</span> on UniSwap</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+          <div class="modal-body">
+              <p>If you have trouble buying on Uniswap, try a round/even number of R3FI <strong>(e.g. 40000 not 40000.3554)</strong> and increase slippage tolerance to 5% or above.</p>
+            <p>This is sometimes necessary due to the fee distribution feature.</p>
+
+            <a target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=0x13572851103bed49ff743af4c4bb5ace88b22e2f" class="btn btn-block btn-primary btn-icon text-nowrap"><span>I'm ready, take me to</span> <img src="assets/icons/uniswap.svg" class="btn-icon__icon btn-icon__icon--m0 btn-icon__icon--badge-white"> <span>UniSwap!</span></a>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="my-5"></div>
 
             
         </div>
@@ -91,7 +113,7 @@
             
             
             
-            <div class="col-lg-12 py-4 ">
+            <div class="col-lg-12 py-4  ">
                 
 <div class="container">
     <div class="row">
@@ -112,7 +134,7 @@
 
             </div>
             
-            <div class="col-lg-6 py-4 ">
+            <div class="col-lg-6 py-4  ">
                 <h1 id="i-classfas-fa-keyi-your-keys-your-fees"><i class="fas fa-key"></i> Your Keys, Your Fees.</h1>
 <p><span class="r3fi-ticker">R3FI</span> is a yield generating, non-custodial ERC-20 token
 that requires no lockup and no gas to claim your rewards. Whether your tokens are stored in MetaMask, in your Hardware wallet
@@ -120,17 +142,13 @@ or a titanium plate under your house foundations, they receive fees from each tr
 
             </div>
             
-            <div class="col-lg-6 py-4  card card--pop ">
+            <div class="col-lg-6 py-4  card card--pop  card--lightning">
                 <h1 id="instant-rewards-from-the-second-your-wallet-holds-r3fi">Instant rewards from the second your wallet holds R3FI.</h1>
 <p>A 5% transaction fee is distributed amongst token holders from <strong>Every. Single. Transaction.</strong> as it happens.</p>
 
             </div>
             
-            <div class="col-lg-12 py-4 ">
-                
-            </div>
-            
-            <div class="col-lg-12 py-4 ">
+            <div class="col-lg-12 py-4  ">
                 <h1 id="decentralised-and-trustless-through-and-through">Decentralised and trustless through and through.</h1>
 <p>Owned by no-one, immutable and completely autonomous. Even the community is decentralised,
 with no overpaid CEO, CTO, COO or advisors. 100% of the supply was distributed at launch and
@@ -156,15 +174,16 @@ You can verify the liquidity lock <a target="_blank" href="https://team.finance/
                 
                 <div class="card">
                     <div class="card-header" id="faqH0">
-                        <h2 class="mb-0"> <button class="btn btn-link btn-block collapsed text-left" type="button" data-bs-toggle="collapse" data-bs-target="#faqC0" aria-expanded="false" aria-controls="faqC0">
+                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC0" aria-expanded="false" aria-controls="faqC0">
                             How do I know my funds are safe?
                         </button></h2>
                     </div>
 
-                    <div id="faqC0" class="collapse" aria-labelledby="faqH0" data-bs-parent="#accordionFaq">
+                    <div id="faqC0" class="collapse" aria-labelledby="faqH0" data-parent="#accordionFaq">
                         <div class="card-body">
-                            <p>Liquidity has been locked for 6 months on team.finance and the developer renounced ownership after deploying the contract.
+                            <p>Liquidity has been locked for 6 months on <a href="https://team.finance/view-coin/0x13572851103bEd49FF743AF4C4BB5ace88B22E2F?name=r3fi.finance&symbol=R3FI" target="_blank">team.finance</a> and the developer renounced ownership after deploying the contract.
 No team or advisor wallets were generated.</p>
+<p>In addition to this, contract ownership was renounced via the <a href="https://etherscan.io/tx/0xbbc6a87ae595f561fa41520e820d1a0dd94327385570758fd569951a0c4d3d3a" target="_blank">renounceOwnership() function</a> making it a fully autonomous token with no control over it by any one party.</p>
 
                         </div>
                     </div>
@@ -172,18 +191,33 @@ No team or advisor wallets were generated.</p>
                 
                 <div class="card">
                     <div class="card-header" id="faqH1">
-                        <h2 class="mb-0"> <button class="btn btn-link btn-block collapsed text-left" type="button" data-bs-toggle="collapse" data-bs-target="#faqC1" aria-expanded="false" aria-controls="faqC1">
+                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC1" aria-expanded="false" aria-controls="faqC1">
                             How were tokens distributed?
                         </button></h2>
                     </div>
 
-                    <div id="faqC1" class="collapse" aria-labelledby="faqH1" data-bs-parent="#accordionFaq">
+                    <div id="faqC1" class="collapse" aria-labelledby="faqH1" data-parent="#accordionFaq">
                         <div class="card-body">
                             <p>A fair launch liquidity pool fundraiser was held with 0 tokens allocated to the team.</p>
 <ul>
 <li>60% (3M) of all tokens were distributed during this fundraiser.</li>
 <li>40% (2M) of all tokens were locked to the UniSwap liquidity pool.</li>
 </ul>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header" id="faqH2">
+                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC2" aria-expanded="false" aria-controls="faqC2">
+                            I&#39;m stuck, can somebody help me?
+                        </button></h2>
+                    </div>
+
+                    <div id="faqC2" class="collapse" aria-labelledby="faqH2" data-parent="#accordionFaq">
+                        <div class="card-body">
+                            <p>Sure! Reach out to us on <a href="https://t.me/r3fifinance">Telegram</a> and someone will be glad to help.</p>
 
                         </div>
                     </div>

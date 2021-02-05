@@ -38,12 +38,22 @@ h1 {
 .r-bg--dark {
   background-color: $r3fi-bg-dark;
   color: $r3fi-text-light;
-
 }
 
 .r-bg--patterned {
-  background-image: url("../images/gplay.png");
   background-attachment: fixed;
+
+
+  &:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/gplay.png");
+  }
 }
 
 .r-bg--secondary {

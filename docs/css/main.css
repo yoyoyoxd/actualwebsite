@@ -11791,8 +11791,17 @@ h1 {
   color: #FFF; }
 
 .r-bg--patterned {
-  background-image: url("../images/gplay.png");
   background-attachment: fixed; }
+  .r-bg--patterned:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+    background-image: url("../images/gplay.png"); }
 
 .r-bg--secondary {
   background-color: #a84988;

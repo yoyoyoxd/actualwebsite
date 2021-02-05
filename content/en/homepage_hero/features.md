@@ -7,5 +7,5 @@ gridWidth: 6
 ---
 
 - <i class="fas fa-coins"></i> 5M tokens, fixed deflationary design.
-- <i class="fas fa-times-circle"></i> No huge ICO.
+- <i class="fas fa-times-circle"></i> No team wallet.
 - <i class="fas fa-tachometer-alt"></i> Instant rewards straight to your wallet.

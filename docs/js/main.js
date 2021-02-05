@@ -10,3 +10,19 @@ stats.getTransactionStats(6498).then((stats) => {
     const feesCnt = new CountUp('tx_fees', Math.round(stats.fees / 1e9));
     feesCnt.start();
 });
+
+$(function () {
+
+    function setMenuBg() {
+        const nav = $('.main-nav');
+        if ($(window).scrollTop() === 0) {
+            nav.removeClass('main-nav--dark');
+        } else {
+            nav.addClass('main-nav--dark');
+        }
+    }
+
+    $(window).on('scroll', setMenuBg);
+
+    setMenuBg();
+});

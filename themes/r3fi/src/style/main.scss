@@ -5,6 +5,12 @@ $grid-gutter-width: 60px;
 @import "variables";
 
 $primary: #2cacb5; // $r3fi-bg-dark;
+$secondary: $r3fi-bg-tertiary;
+
+@font-face {
+  font-family: "Sukar Black";
+  src: url("../webfonts/Sukar-Black.woff");
+}
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -15,12 +21,12 @@ $primary: #2cacb5; // $r3fi-bg-dark;
 @import "variables";
 
 body {
-  color: $r3fi-body-text-colour;
+  color: $r3fi-text-light;
   font-family: 'Monserrat', sans-serif;
 }
 
 h1, h2, h3, h4 {
-  color: #000;
+  color: $r3fi-text-light;
   font-weight: bold;
 }
 
@@ -32,10 +38,12 @@ h1 {
 .r-bg--dark {
   background-color: $r3fi-bg-dark;
   color: $r3fi-text-light;
+
 }
 
 .r-bg--patterned {
   background-image: url("../images/gplay.png");
+  background-attachment: fixed;
 }
 
 .r-bg--secondary {
@@ -43,9 +51,34 @@ h1 {
   color: $r3fi-text-light;
 }
 
+.r-bg--light {
+  background-color: $r3fi-bg-light;
+  color: $r3fi-body-text-colour;
+
+
+  h1, h2, h3, h4 {
+    color: #000;
+    font-weight: bold;
+  }
+
+}
+
 .r3fi-ticker {
   font-weight: bold;
   color: $r3fi-colour-secondary;
+}
+
+.main-nav {
+  color: #FFF;
+  transition: background-color .2s linear;
+
+  &--dark {
+    background-color: $r3fi-bg-dark;
+  }
+
+  a, .navbar-toggler {
+    color: #FFF;
+  }
 }
 
 .block-hero {
@@ -88,6 +121,25 @@ h1 {
   }
 }
 
+.btn-icon {
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: .5em;
+
+    &--badge-white {
+      background-color: #FFF;
+      border-radius: 50%;
+      padding: 3px;
+    }
+  }
+
+  span {
+    vertical-align: text-top;
+  }
+}
+
 .hero-links {
   background: $r3fi-bg-secondary;
 
@@ -124,17 +176,6 @@ h1 {
     }
   }
 
-  &__icon {
-    width: 32px;
-    height: 32px;
-    margin-right: .5em;
-
-    &--badge-white {
-      background-color: #FFF;
-      border-radius: 50%;
-      padding: 3px;
-    }
-  }
 }
 
 .r3fi-glow-wrapper {
@@ -169,5 +210,27 @@ h1 {
   .txCounter__count {
     margin: 1em 0 .5em;
     font-size: 2em;
+  }
+}
+
+.card--pop {
+  background-color: lighten($r3fi-bg-tertiary, 25%);
+  border: none;
+  align-self: center;
+
+  h1 {
+    color: $r3fi-bg-dark;
+    font-family: "Sukar Black", Georgia, serif;
+    font-size: 1.2em;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    & {
+      border-radius: 0;
+    }
   }
 }

@@ -236,6 +236,46 @@ h1 {
   }
 }
 
+.calculator {
+  display: flex;
+  position: relative;
+
+  h1 {
+    position: absolute;
+    top: -.5em;
+    left: 0;
+  }
+
+  &__row {
+    display: flex;
+    padding: .5em;
+  }
+
+  &__holdings {
+    justify-content: space-between;
+    align-items: center;
+
+    label {
+      margin-bottom: 0;
+    }
+  }
+
+
+  &__volume {
+    flex-direction: column;
+
+    label {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__results {
+    justify-content: space-between;
+    font-weight: bold;
+  }
+}
+
 .card {
   color: $r3fi-body-text-colour;
 

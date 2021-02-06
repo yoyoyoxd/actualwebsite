@@ -11916,6 +11916,30 @@ h1 {
     margin: 1em 0 .5em;
     font-size: 2em; }
 
+.calculator {
+  display: flex;
+  position: relative; }
+  .calculator h1 {
+    position: absolute;
+    top: -.5em;
+    left: 0; }
+  .calculator__row {
+    display: flex;
+    padding: .5em; }
+  .calculator__holdings {
+    justify-content: space-between;
+    align-items: center; }
+    .calculator__holdings label {
+      margin-bottom: 0; }
+  .calculator__volume {
+    flex-direction: column; }
+    .calculator__volume label {
+      display: flex;
+      justify-content: space-between; }
+  .calculator__results {
+    justify-content: space-between;
+    font-weight: bold; }
+
 .card {
   color: #313131; }
   .card .card-header h2 .btn {

@@ -11849,11 +11849,26 @@ h1 {
 .block-features ul {
   list-style: none;
   font-size: 1.3em;
-  display: inline-block; }
+  display: inline-block;
+  padding: 0 1em; }
   .block-features ul li {
     margin: .2em 0; }
     .block-features ul li + .fas {
       margin-right: .5em; }
+
+.block-stats {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 180px; }
+  .block-stats h1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+    color: #260f38; }
 
 .btn-icon__icon {
   width: 32px;
@@ -11915,6 +11930,30 @@ h1 {
   .txCounter .txCounter__count {
     margin: 1em 0 .5em;
     font-size: 2em; }
+
+.calculator {
+  display: flex;
+  position: relative; }
+  .calculator h1 {
+    position: absolute;
+    top: -.5em;
+    left: .5em; }
+  .calculator__row {
+    display: flex;
+    padding: .5em; }
+  .calculator__holdings {
+    justify-content: space-between;
+    align-items: center; }
+    .calculator__holdings label {
+      margin-bottom: 0; }
+  .calculator__volume {
+    flex-direction: column; }
+    .calculator__volume label {
+      display: flex;
+      justify-content: space-between; }
+  .calculator__results {
+    justify-content: space-between;
+    font-weight: bold; }
 
 .card {
   color: #313131; }

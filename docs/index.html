@@ -117,14 +117,44 @@
                 
 <div class="container">
     <div class="row">
-        <div class="col-sm txCounter">
-            <strong class="txCounter__count" id="tx_total">0</strong> <span class="r3fi-ticker">R3FI</span>
-            <div>transferred in the past 24 hours</div>
+        <div class="col-sm-12 col-lg-4 py-4 calculator card card--pop" id="calculator">
+            <h1>Yield Calculator</h1>
+            <div class="calculator__row calculator__holdings">
+                <label for="calc_holdings">Holdings:</label>
+                <input type="number" id="calc_holdings" value="50000" step="500">
+            </div>
+            <div class="calculator__row calculator__volume">
+                <label for="calc_volume">Daily Volume: <span><strong id="calc_volume_val"></strong> <span
+                        class="r3fi-ticker">R3FI</span></span></label>
+                <input type="range" id="calc_volume" value="3" min="1" max="11" step="1">
+            </div>
+            <div class="calculator__row calculator__results">
+                <div>Daily Rewards:</div>
+                <div><span id="calc_results">0</span> <span class="r3fi-ticker">R3FI</span></div>
+            </div>
+
         </div>
-        <div class="col-sm txCounter"><strong id="tx_fees" class="txCounter__count">0</strong> <span
-                class="r3fi-ticker">R3FI</span>
-            <div>distributed from fees over the past 24 hours</div>
+
+        <!--<div class="col-sm">
+            <img src="images/distribution.svg">
+        </div>-->
+
+        <div class="col-sm block-stats">
+            <h1>In 24 Hours</h1>
+            <div class="d-flex flex-column">
+                <div class="txCounter">
+                    <strong class="txCounter__count" id="tx_total">0</strong> <span
+                        class="r3fi-ticker">R3FI</span>
+                    <div>transactions</div>
+                </div>
+                <div class="txCounter">
+                    <strong id="tx_fees" class="txCounter__count">0</strong> <span
+                        class="r3fi-ticker">R3FI</span>
+                    <div>fees distributed</div>
+                </div>
+            </div>
         </div>
+
         <!--<div class="col-sm txCounter"><strong id="wallet_holders" class="txCounter__count">0</strong> <span
                 class="r3fi-ticker">R3FI</span>
             <div>token holders</div>
@@ -211,11 +241,28 @@ No team or advisor wallets were generated.</p>
                 <div class="card">
                     <div class="card-header" id="faqH2">
                         <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC2" aria-expanded="false" aria-controls="faqC2">
-                            I&#39;m stuck, can somebody help me?
+                            I&#39;m not seeing reward transactions in my wallet?
                         </button></h2>
                     </div>
 
                     <div id="faqC2" class="collapse" aria-labelledby="faqH2" data-parent="#accordionFaq">
+                        <div class="card-body">
+                            <p>The rewards mechanism built into the contract aren&rsquo;t distributed via individual blockchain transactions,
+but if you look at your balance on Etherscan or your preferred Eth explorer, you can see the rewards in
+your wallet token balance.</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header" id="faqH3">
+                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC3" aria-expanded="false" aria-controls="faqC3">
+                            I&#39;m stuck, can somebody help me?
+                        </button></h2>
+                    </div>
+
+                    <div id="faqC3" class="collapse" aria-labelledby="faqH3" data-parent="#accordionFaq">
                         <div class="card-body">
                             <p>Sure! Reach out to us on <a href="https://t.me/r3fifinance">Telegram</a> and someone will be glad to help.</p>
 

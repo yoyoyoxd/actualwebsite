@@ -9,28 +9,43 @@ position: 0
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-lg-4 py-4 calculator card card--pop" id="calculator">
-            <h1>Reward Calculator</h1>
+            <h1>Yield Calculator</h1>
             <div class="calculator__row calculator__holdings">
                 <label for="calc_holdings">Holdings:</label>
                 <input type="number" id="calc_holdings" value="50000" step="500">
             </div>
             <div class="calculator__row calculator__volume">
-                <label for="calc_volume">Daily Volume: <span><strong id="calc_volume_val"></strong> <span class="r3fi-ticker">R3FI</span></span></label>
-                <input type="range" id="calc_volume" value="3" min="1" max="10" step="1">
+                <label for="calc_volume">Daily Volume: <span><strong id="calc_volume_val"></strong> <span
+                        class="r3fi-ticker">R3FI</span></span></label>
+                <input type="range" id="calc_volume" value="3" min="1" max="11" step="1">
             </div>
             <div class="calculator__row calculator__results">
-                <div>Daily Rewards:</div> <div><span id="calc_results">0</span> <span class="r3fi-ticker">R3FI</span></div>
+                <div>Daily Rewards:</div>
+                <div><span id="calc_results">0</span> <span class="r3fi-ticker">R3FI</span></div>
             </div>
 
         </div>
-        <div class="col-sm txCounter">
-            <strong class="txCounter__count" id="tx_total">0</strong> <span class="r3fi-ticker">R3FI</span>
-            <div>transferred in the past 24 hours</div>
+
+        <!--<div class="col-sm">
+            <img src="images/distribution.svg">
+        </div>-->
+
+        <div class="col-sm block-stats">
+            <h1>In 24 Hours</h1>
+            <div class="d-flex flex-column">
+                <div class="txCounter">
+                    <strong class="txCounter__count" id="tx_total">0</strong> <span
+                        class="r3fi-ticker">R3FI</span>
+                    <div>transactions</div>
+                </div>
+                <div class="txCounter">
+                    <strong id="tx_fees" class="txCounter__count">0</strong> <span
+                        class="r3fi-ticker">R3FI</span>
+                    <div>fees distributed</div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm txCounter"><strong id="tx_fees" class="txCounter__count">0</strong> <span
-                class="r3fi-ticker">R3FI</span>
-            <div>distributed from fees over the past 24 hours</div>
-        </div>
+
         <!--<div class="col-sm txCounter"><strong id="wallet_holders" class="txCounter__count">0</strong> <span
                 class="r3fi-ticker">R3FI</span>
             <div>token holders</div>

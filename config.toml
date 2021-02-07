@@ -1,4 +1,4 @@
-baseURL = "https://crypto-b.github.io/test-site/"
+baseURL = "https://r3fi.finance/"
 defaultContentLanguage = "en"
 theme = "r3fi"
 publishDir = "docs"

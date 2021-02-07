@@ -4,7 +4,7 @@ $grid-gutter-width: 60px;
 
 @import "variables";
 
-$primary: #2cacb5; // $r3fi-bg-dark;
+$primary: $r3fi-link-colour; // $r3fi-bg-dark;
 $secondary: $r3fi-bg-tertiary;
 
 @font-face {
@@ -13,7 +13,6 @@ $secondary: $r3fi-bg-tertiary;
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
-
 
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
@@ -182,6 +181,20 @@ h1 {
     &:hover {
       text-decoration: none;
       color: $r3fi-colour-secondary;
+    }
+  }
+}
+
+.icon-link {
+  color: $r3fi-link-colour;
+  transition: ease-in-out color 200ms;
+
+  &:hover {
+    color: darken($r3fi-link-colour, 10%);
+    text-decoration: none;
+
+    span {
+      text-decoration: underline;
     }
   }
 }

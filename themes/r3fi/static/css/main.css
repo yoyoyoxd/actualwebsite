@@ -11907,6 +11907,15 @@ h1 {
       text-decoration: none;
       color: #a84988; }
 
+.icon-link {
+  color: #2cacb5;
+  transition: ease-in-out color 200ms; }
+  .icon-link:hover {
+    color: #22858c;
+    text-decoration: none; }
+    .icon-link:hover span {
+      text-decoration: underline; }
+
 .btn-icon__icon {
   width: 32px;
   height: 32px;

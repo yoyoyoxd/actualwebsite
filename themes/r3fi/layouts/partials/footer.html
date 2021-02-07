@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm col-md-6 offset-md-3 mb-5 block-footer">
+            {{ with .Site.GetPage "footer_links.html" }}
+
+            {{ .Content }}
+
+            {{ end }}
+        </div>
+    </div>
+</div>

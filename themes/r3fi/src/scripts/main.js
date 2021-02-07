@@ -42,6 +42,10 @@ $(function () {
         const nav = $('.main-nav');
         if ($(window).scrollTop() === 0) {
             nav.removeClass('main-nav--dark');
+
+            $('#navbarSupportedContent').on('show.bs.collapse', function () {
+               nav.addClass('main-nav--dark');
+            });
         } else {
             nav.addClass('main-nav--dark');
         }

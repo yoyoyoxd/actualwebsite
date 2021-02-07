@@ -17,26 +17,25 @@
             {{ end }}
         </div>
     </div>
-
-<div class="r-bg--secondary" id="project">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm hero-links">
-                {{ range $hero.Resources.Match "hero-links.*"}}
-                {{ .Content }}
-                {{ end}}
+    <div class="r-bg--secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm hero-links">
+                    {{ range $hero.Resources.Match "hero-links.*"}}
+                    {{ .Content }}
+                    {{ end}}
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="r-bg--light">
+<div class="r-bg--light" id="project">
     <div class="container">
         <div class="row">
             {{ $blocks := .Site.GetPage "/homepage_blocks" }}
             {{ with $blocks.Resources.ByType "page" }}
             {{ range sort . ".Params.position" }}
-            <div class="col-lg-{{ .Params.gridWidth }} py-4 {{ if .Params.card }} card card--pop {{ end }} {{ .Params.classes }}">
+            <div class="col-lg-{{ .Params.gridWidth }} py-4 my-4 {{ if .Params.card }} card card--pop {{ end }} {{ .Params.classes }}">
                 {{ .Content }}
             </div>
             {{ end }}
@@ -72,6 +71,16 @@
             </div>
         </div>
     </div>
-
 </div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm">
+            {{ $rm := .Site.GetPage "roadmap.md" }}
+            <h2 id="roadmap">{{ $rm.Title}}</h2>
+                {{ $rm.Content }}
+        </div>
+    </div>
+</div>
+
 {{ end }}

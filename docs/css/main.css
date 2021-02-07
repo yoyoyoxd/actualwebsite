@@ -11823,7 +11823,9 @@ h1 {
 
 .main-nav {
   color: #FFF;
-  transition: background-color .2s linear; }
+  transition: background-color .2s linear;
+  position: fixed;
+  width: 100%; }
   .main-nav .navbar-brand {
     font-family: "Sukar Black", Georgia, serif; }
   .main-nav--dark {
@@ -11834,7 +11836,8 @@ h1 {
 .block-hero {
   display: flex;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 60px 0; }
   .block-hero > div {
     margin-top: 1em;
     margin-bottom: 1em; }
@@ -11856,12 +11859,18 @@ h1 {
     .block-features ul li + .fas {
       margin-right: .5em; }
 
+@media (min-width: 992px) {
+  .block-features {
+    font-size: 1.2em; } }
+
 .block-stats {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  min-height: 180px; }
+  min-height: 180px;
+  flex-grow: 0;
+  margin-right: 1em; }
   .block-stats h1 {
     position: absolute;
     top: 0;
@@ -11946,6 +11955,8 @@ h1 {
     align-items: center; }
     .calculator__holdings label {
       margin-bottom: 0; }
+    .calculator__holdings input {
+      width: 50%; }
   .calculator__volume {
     flex-direction: column; }
     .calculator__volume label {

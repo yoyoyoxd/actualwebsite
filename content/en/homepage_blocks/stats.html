@@ -3,11 +3,27 @@ title: ""
 date: 2021-02-02T07:42:22+01:00
 draft: false
 gridWidth: 12
-position: 0
+position: 3
 ---
 
 <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
+        <div class="col-sm block-stats my-4 my-md-0">
+            <h1>In 24 Hours</h1>
+            <div class="d-flex flex-column">
+                <div class="txCounter">
+                    <strong class="txCounter__count" id="tx_total">0</strong> <span
+                        class="r3fi-ticker">R3FI</span>
+                    <div>transactions</div>
+                </div>
+                <div class="txCounter">
+                    <strong id="tx_fees" class="txCounter__count">0</strong> <span
+                        class="r3fi-ticker">R3FI</span>
+                    <div>fees distributed</div>
+                </div>
+            </div>
+        </div>
+
         <div class="col-sm-12 col-lg-4 py-4 calculator card card--pop" id="calculator">
             <h1>Yield Calculator</h1>
             <div class="calculator__row calculator__holdings">
@@ -26,29 +42,5 @@ position: 0
 
         </div>
 
-        <!--<div class="col-sm">
-            <img src="images/distribution.svg">
-        </div>-->
-
-        <div class="col-sm block-stats">
-            <h1>In 24 Hours</h1>
-            <div class="d-flex flex-column">
-                <div class="txCounter">
-                    <strong class="txCounter__count" id="tx_total">0</strong> <span
-                        class="r3fi-ticker">R3FI</span>
-                    <div>transactions</div>
-                </div>
-                <div class="txCounter">
-                    <strong id="tx_fees" class="txCounter__count">0</strong> <span
-                        class="r3fi-ticker">R3FI</span>
-                    <div>fees distributed</div>
-                </div>
-            </div>
-        </div>
-
-        <!--<div class="col-sm txCounter"><strong id="wallet_holders" class="txCounter__count">0</strong> <span
-                class="r3fi-ticker">R3FI</span>
-            <div>token holders</div>
-        </div>-->
     </div>
 </div>

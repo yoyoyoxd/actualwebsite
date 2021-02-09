@@ -5,9 +5,9 @@ draft: false
 gridWidth: 12
 position: 3
 ---
-# Decentralised and trustless through and through.
+# Decentralized and trustless through and through.
 
-Owned by no-one, immutable and completely autonomous. Even the community is decentralised, 
+Owned by no-one, immutable and completely autonomous. Even the community is decentralized, 
 with no overpaid CEO, CTO, COO or advisors. 100% of the supply was distributed at launch and 
 **every single volunteer purchased their own tokens.**
 

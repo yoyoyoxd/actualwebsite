@@ -11906,6 +11906,11 @@ h1 {
     .block-footer a:hover {
       text-decoration: none;
       color: #a84988; }
+  @media (max-width: 767.98px) {
+    .block-footer {
+      flex-direction: column; }
+      .block-footer a {
+        margin-bottom: .5em; } }
 
 .icon-link {
   color: #2cacb5;

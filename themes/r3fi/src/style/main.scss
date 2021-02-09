@@ -183,6 +183,16 @@ h1 {
       color: $r3fi-colour-secondary;
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    & {
+      flex-direction: column;
+
+      a {
+        margin-bottom: .5em;
+      }
+    }
+  }
 }
 
 .icon-link {

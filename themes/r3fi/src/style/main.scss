@@ -128,6 +128,11 @@ h1 {
   color: $r3fi-text-light;
 }
 
+.block-actions {
+  a {
+    color: #FFF;
+  }
+}
 
 .block-features {
   ul {
@@ -178,6 +183,7 @@ h1 {
   a {
     color: #FFF;
     transition: color ease-in-out 200ms;
+
     &:hover {
       text-decoration: none;
       color: $r3fi-colour-secondary;
@@ -298,6 +304,8 @@ h1 {
 
 .txCounter {
   text-align: right;
+  white-space: nowrap;
+
 
   .txCounter__count {
     margin: 1em 0 .5em;

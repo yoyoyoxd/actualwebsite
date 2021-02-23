@@ -38,6 +38,12 @@ if (getElByID('calculator')) {
 }
 
 $(function () {
+
+    $('.purchaseGuideBtn').on('click', function () {
+        $('#cpurchaseGuide').collapse('show');
+    });
+
+
     function setMenuBg() {
         const nav = $('.main-nav');
         if ($(window).scrollTop() === 0) {

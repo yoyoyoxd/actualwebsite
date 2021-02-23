@@ -54,13 +54,13 @@
                 {{ with $blocks.Resources.ByType "page" }}
                 {{ range $index, $page := sort . ".Params.position" }}
                 <div class="card">
-                    <div class="card-header" id="faqH{{ $index }}">
-                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC{{ $index }}" aria-expanded="false" aria-controls="faqC{{ $index }}">
+                    <div class="card-header" id="{{ if .Params.cardId }}h{{.Params.cardId}}{{else}}faqH{{ $index }}{{end}}">
+                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#{{ if .Params.cardId }}c{{.Params.cardId}}{{else}}faqC{{ $index }}{{end}}" aria-expanded="false" aria-controls="{{ if .Params.cardId }}c{{.Params.cardId}}{{else}}faqH{{ $index }}{{end}}">
                             {{ .Title | markdownify }}
                         </button></h2>
                     </div>
 
-                    <div id="faqC{{ $index }}" class="collapse" aria-labelledby="faqH{{ $index }}" data-parent="#accordionFaq">
+                    <div id="{{ if .Params.cardId }}c{{.Params.cardId}}{{else}}faqC{{ $index }}{{end}}" class="collapse" aria-labelledby="{{ if .Params.cardId }}h{{.Params.cardId}}{{else}}faqH{{ $index }}{{end}}" data-parent="#accordionFaq">
                         <div class="card-body">
                             {{ .Content }}
                         </div>

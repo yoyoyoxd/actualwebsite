@@ -55,13 +55,15 @@
         <div class="block-actions">
             
             
-<a href="https://app.uniswap.org/#/swap?inputCurrency=0x13572851103bed49ff743af4c4bb5ace88b22e2f" class="btn btn-primary btn-icon text-nowrap" data-toggle="modal" target="_blank" data-target="#uniswapGuide"><img src="assets/icons/uniswap.svg" class="btn-icon__icon btn-icon__icon--badge-white"> <span>Buy on UniSwap</span></a>
-
+<a href="https://app.uniswap.org/#/swap?inputCurrency=0x13572851103bed49ff743af4c4bb5ace88b22e2f" class="btn btn-primary btn-icon text-nowrap" data-toggle="modal" target="_blank" data-target="#uniswapGuide"><img src="assets/icons/uniswap.svg" class="btn-icon__icon btn-icon__icon--badge-white"> <span>Buy on Uniswap</span></a>
+<div class="mt-4 text-center">
+<a href="#hpurchaseGuide" class="purchaseGuideBtn">Uniswap Purchase Guide</a>
+</div>
 <div class="modal fade" id="uniswapGuide" tabindex="-1" role="dialog" aria-labelledby="uniswapGuideLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content r-bg--light">
             <div class="modal-header">
-                <h5 class="modal-title" id="uniswapGuideLabel"><span class="r3fi-ticker">R3FI</span> on UniSwap</h5>
+                <h5 class="modal-title" id="uniswapGuideLabel"><span class="r3fi-ticker">R3FI</span> on Uniswap</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -70,7 +72,7 @@
               <p>If you have trouble buying on Uniswap, try a round/even number of R3FI <strong>(e.g. 40000 not 40000.3554)</strong> and increase slippage tolerance to 5% or above.</p>
             <p>This is sometimes necessary due to the fee distribution feature.</p>
 
-            <a target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=0x13572851103bed49ff743af4c4bb5ace88b22e2f" class="btn btn-block btn-primary btn-icon text-nowrap"><span>I'm ready, take me to</span> <img src="assets/icons/uniswap.svg" class="btn-icon__icon btn-icon__icon--m0 btn-icon__icon--badge-white"> <span>UniSwap!</span></a>
+            <a target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=0x13572851103bed49ff743af4c4bb5ace88b22e2f" class="btn btn-block btn-primary btn-icon text-nowrap"><span>I'm ready, take me to</span> <img src="assets/icons/uniswap.svg" class="btn-icon__icon btn-icon__icon--m0 btn-icon__icon--badge-white"> <span>Uniswap!</span></a>
           </div>
         </div>
     </div>
@@ -96,6 +98,8 @@
         <span>Etherscan</span></a></li>
     <li><a target="_blank" href="https://coinmarketcap.com/currencies/r3fi-finance/" class="hero-links__link"><img src="assets/icons/coinmarketcap.svg" class="btn-icon__icon">
         <span>CoinMarketCap</span></a></li>
+    <li><a target="_blank" href="https://www.coingecko.com/en/coins/r3fi-finance" class="hero-links__link"><img src="assets/icons/coingecko.png" class="btn-icon__icon">
+        <span>CoinGecko</span></a></li>
 </ul>
 
                     
@@ -134,7 +138,7 @@ or a titanium plate under your house foundations, they receive fees from each tr
                 <div class="txCounter">
                     <strong class="txCounter__count" id="tx_total">0</strong> <span
                         class="r3fi-ticker">R3FI</span>
-                    <div>transactions</div>
+                    <div>tokens transacted</div>
                 </div>
                 <div class="txCounter">
                     <strong id="tx_fees" class="txCounter__count">0</strong> <span
@@ -153,7 +157,7 @@ or a titanium plate under your house foundations, they receive fees from each tr
             <div class="calculator__row calculator__volume">
                 <label for="calc_volume">Daily Volume: <span><strong id="calc_volume_val"></strong> <span
                         class="r3fi-ticker">R3FI</span></span></label>
-                <input type="range" id="calc_volume" value="5" min="1" max="11" step="1">
+                <input type="range" id="calc_volume" value="7" min="1" max="11" step="1">
             </div>
             <div class="calculator__row calculator__results">
                 <div>Daily Rewards:</div>
@@ -191,13 +195,28 @@ You can verify the liquidity lock <a target="_blank" href="https://team.finance/
                 
                 
                 <div class="card">
-                    <div class="card-header" id="faqH0">
-                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC0" aria-expanded="false" aria-controls="faqC0">
+                    <div class="card-header" id="hpurchaseGuide">
+                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#cpurchaseGuide" aria-expanded="false" aria-controls="cpurchaseGuide">
+                            How do I purchase on Uniswap?
+                        </button></h2>
+                    </div>
+
+                    <div id="cpurchaseGuide" class="collapse" aria-labelledby="hpurchaseGuide" data-parent="#accordionFaq">
+                        <div class="card-body">
+                            <img src="./assets/buyers-guide-compressed.jpeg" style="width:100%" title="R3FI Purchase Guide">
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header" id="faqH1">
+                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC1" aria-expanded="false" aria-controls="faqH1">
                             How do I know my funds are safe?
                         </button></h2>
                     </div>
 
-                    <div id="faqC0" class="collapse" aria-labelledby="faqH0" data-parent="#accordionFaq">
+                    <div id="faqC1" class="collapse" aria-labelledby="faqH1" data-parent="#accordionFaq">
                         <div class="card-body">
                             <p>Liquidity has been locked for 6 months on <a href="https://team.finance/view-coin/0x13572851103bEd49FF743AF4C4BB5ace88B22E2F?name=r3fi.finance&symbol=R3FI" target="_blank">team.finance</a> and the developer renounced ownership after deploying the contract.
 No team or advisor wallets were generated.</p>
@@ -208,13 +227,13 @@ No team or advisor wallets were generated.</p>
                 </div>
                 
                 <div class="card">
-                    <div class="card-header" id="faqH1">
-                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC1" aria-expanded="false" aria-controls="faqC1">
+                    <div class="card-header" id="faqH2">
+                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC2" aria-expanded="false" aria-controls="faqH2">
                             How were tokens distributed?
                         </button></h2>
                     </div>
 
-                    <div id="faqC1" class="collapse" aria-labelledby="faqH1" data-parent="#accordionFaq">
+                    <div id="faqC2" class="collapse" aria-labelledby="faqH2" data-parent="#accordionFaq">
                         <div class="card-body">
                             <p>A small liquidity pool fundraiser (10ETH) was held with 0 tokens allocated to the team. This was locked in to UniSwap for at least 6 months.</p>
 <ul>
@@ -227,13 +246,13 @@ No team or advisor wallets were generated.</p>
                 </div>
                 
                 <div class="card">
-                    <div class="card-header" id="faqH2">
-                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC2" aria-expanded="false" aria-controls="faqC2">
+                    <div class="card-header" id="faqH3">
+                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC3" aria-expanded="false" aria-controls="faqH3">
                             I&rsquo;m not seeing reward transactions in my wallet?
                         </button></h2>
                     </div>
 
-                    <div id="faqC2" class="collapse" aria-labelledby="faqH2" data-parent="#accordionFaq">
+                    <div id="faqC3" class="collapse" aria-labelledby="faqH3" data-parent="#accordionFaq">
                         <div class="card-body">
                             <p>The reward mechanism built into the contract doesn&rsquo;t distribute rewards via individual blockchain transactions, you will be able to see your
 current balance by viewing your address on the Etherscan website.</p>
@@ -243,13 +262,13 @@ current balance by viewing your address on the Etherscan website.</p>
                 </div>
                 
                 <div class="card">
-                    <div class="card-header" id="faqH3">
-                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC3" aria-expanded="false" aria-controls="faqC3">
+                    <div class="card-header" id="faqH4">
+                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC4" aria-expanded="false" aria-controls="faqH4">
                             I&rsquo;m stuck, can somebody help me?
                         </button></h2>
                     </div>
 
-                    <div id="faqC3" class="collapse" aria-labelledby="faqH3" data-parent="#accordionFaq">
+                    <div id="faqC4" class="collapse" aria-labelledby="faqH4" data-parent="#accordionFaq">
                         <div class="card-body">
                             <p>Sure! Reach out to us on <a href="https://t.me/r3fifinance">Telegram</a> and someone will be glad to help.</p>
 
@@ -258,13 +277,13 @@ current balance by viewing your address on the Etherscan website.</p>
                 </div>
                 
                 <div class="card">
-                    <div class="card-header" id="faqH4">
-                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC4" aria-expanded="false" aria-controls="faqC4">
+                    <div class="card-header" id="faqH5">
+                        <h2 class="mb-0"> <button class="btn btn-block collapsed text-left" type="button" data-toggle="collapse" data-target="#faqC5" aria-expanded="false" aria-controls="faqH5">
                             What&rsquo;s next for <span class="r3fi-ticker">R3FI</span>?
                         </button></h2>
                     </div>
 
-                    <div id="faqC4" class="collapse" aria-labelledby="faqH4" data-parent="#accordionFaq">
+                    <div id="faqC5" class="collapse" aria-labelledby="faqH5" data-parent="#accordionFaq">
                         <div class="card-body">
                             <p>We&rsquo;re working hard at updating the site with more information,
 a roadmap and ways to interact with the <span class="r3fi-ticker">R3FI</span> token.</p>
@@ -298,6 +317,7 @@ a roadmap and ways to interact with the <span class="r3fi-ticker">R3FI</span> to
             
 <a href="https://t.me/r3fifinance" target="_blank" class="icon-link"><i class="fab fa-telegram"></i> Telegram</a>
 <a href="https://twitter.com/R3fiToken" target="_blank" class="icon-link"><i class="fab fa-twitter"></i> Twitter</a>
+<a href="https://www.facebook.com/R3FIfinance-117046703756702" target="_blank" class="icon-link"><i class="fab fa-facebook"></i> Facebook</a>
 <a href="https://medium.com/r3fi" target="_blank" class="icon-link"><i class="fab fa-medium"></i> Medium</a>
 <a href="https://github.com/r3fifinance/" target="_blank" class="icon-link"><i class="fab fa-github"></i> Github</a>
 <a href="https://r3fi.finance/litepaper.pdf" target="_blank" class="icon-link"><i class="fas fa-file"></i> Litepaper</a>

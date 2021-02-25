@@ -3,7 +3,7 @@ title: "Decentralised and trustless through and through."
 date: 2021-02-02T07:42:22+01:00
 draft: false
 gridWidth: 12
-position: 3
+position: 5
 ---
 # Decentralized and trustless through and through.
 

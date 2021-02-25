@@ -35,7 +35,7 @@
             {{ $blocks := .Site.GetPage "/homepage_blocks" }}
             {{ with $blocks.Resources.ByType "page" }}
             {{ range sort . ".Params.position" }}
-            <div class="col-lg-{{ .Params.gridWidth }} py-4 my-4 {{ if .Params.card }} card card--pop {{ end }} {{ .Params.classes }}">
+            <div class="{{ if .Params.mdGridWidth }}col-md-{{.Params.mdGridWidth}}{{ end }} col-lg-{{ .Params.gridWidth }} py-4 my-4 {{ if .Params.card }} card card--pop {{ end }} {{ .Params.classes }}">
                 {{ .Content }}
             </div>
             {{ end }}

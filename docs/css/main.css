@@ -11870,6 +11870,26 @@ h1 {
 .block-actions a {
   color: #FFF; }
 
+.block-social {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+  text-align: center; }
+  .block-social a {
+    font-size: 4em;
+    transition: opacity ease-in-out .3s; }
+    .block-social a:hover {
+      opacity: .9; }
+  .block-social .socialLink--discord {
+    color: #8196db; }
+  .block-social .socialLink--facebook {
+    color: #3b5998; }
+  .block-social .socialLink--twitter {
+    color: #5aa4d6; }
+  .block-social .socialLink--telegram {
+    color: #3f84c6; }
+
 .block-features ul {
   list-style: none;
   font-size: 1.3em;
@@ -11897,7 +11917,7 @@ h1 {
     top: 0;
     right: 0;
     transform: rotate(-90deg);
-    transform-origin: bottom right;
+    transform-origin: right center;
     color: #260f38; }
 
 .block-footer {
@@ -11988,7 +12008,8 @@ h1 {
 
 .calculator {
   display: flex;
-  position: relative; }
+  position: relative;
+  padding: 1em; }
   .calculator h1 {
     position: absolute;
     top: -.5em;
